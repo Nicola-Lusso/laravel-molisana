@@ -1,0 +1,36 @@
+main{
+    .box-container {
+        margin-top: 30px;
+        @include flex-center;
+        flex-wrap: wrap;
+        .box {
+            display: flex;
+            flex-basis: calc(100% / 3);
+            position: relative;
+            .descrizione{
+                display: none;
+                @include position;
+                color: purple;
+            }
+            &:hover .descrizione{
+                display: block;
+            }
+            &:hover img{
+                opacity: 0.6;
+            }
+            img{
+                width: 100%;
+                height: 300px;
+                padding: 5px 5px;
+            }
+        }
+    }
+    .home{
+
+        @include flex-center;
+        img{
+            height: 300px;
+        }
+
+    } 
+}
