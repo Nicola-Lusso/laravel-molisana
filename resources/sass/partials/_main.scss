@@ -3,28 +3,50 @@ main{
         margin-top: 30px;
         @include flex-center;
         flex-wrap: wrap;
-        .box {
+        .box{
             display: flex;
             flex-basis: calc(100% / 3);
             position: relative;
-            .descrizione{
-                display: none;
-                @include position;
-                color: purple;
-            }
-            &:hover .descrizione{
-                display: block;
-            }
+        
             &:hover img{
                 opacity: 0.6;
             }
             img{
                 width: 100%;
                 height: 300px;
-                padding: 5px 5px;
+                
+            }
+            .overlay{
+                display: none;
+                position: absolute;
+                top: 0%;
+                left: 0%;
+                width: 100%;
+                height: 100%;
+
+                a{
+                    
+                    text-decoration: none;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    height: 100%;
+
+                }
+            }
+            &:hover .overlay{
+                display: block;
             }
         }
     }
+    // .scheda-prodotto {
+    //     max-width: 100%;
+    //     display: flex;
+    //     img{
+    //         width: 90%;
+    //     }
+    // }
     .home{
 
         @include flex-center;
